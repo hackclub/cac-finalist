@@ -153,41 +153,21 @@ export default function Home() {
           />
         </div>
 
-
-
+        {/*About */}
         <div className="relative z-50 max-w-3xl mx-auto p-6 pb-10">
-          <h1 className="text-4xl font-bold">Get Invited To The Congressional Hackathon</h1>
-          <p className="mt-4">The Congressional Finalist Award comes with an invite to the Congressional Hackathon-an in-person Hackathon in the Capitol, Washington D.C. Here are the numbers:</p>
-          <ul className="space-y-6 text-center">
-            <li>
-              <span className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                170
-              </span>
-              <p className="text-lg text-gray-700">students in Washington D.C.</p>
-            </li>
-            <li>
-              <span className="text-6xl font-bold bg-gradient-to-r from-green-500 to-teal-600 bg-clip-text text-transparent">
-                $10
-              </span>
-              <p className="text-lg text-gray-700">towards your travel stipend for every hour worked on your project</p>
-            </li>
-            <li>
-              <span className="text-6xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent">
-                10+
-              </span>
-              <p className="text-lg text-gray-700">congressional representatives coming to see finished projects</p>
-            </li>
-          </ul>
-          <p className="mt-4">Want to get started? RSVP using the link below, and start working on your project. Dont forget, every hour worked on a project counts $10 towards travel to Washington D.C. This only counts when logged with Hackatime.</p>
-
-        </div>
+            <p className="text-4xl font-bold">Hack Club Congressional App Challenge</p>
+            <p className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent underline decoration-black">
+              Finalist Award
+            </p>
+          
 
 
+          <p className="mt-4">Every year, there are thousands of students who compete in the Congressional App Challenge. However, only a couple hundred get to go to the capital. For the 2025-2026 Congressional App Challenge, Hack Club would like to recognise the real winners-anybody who open sources their project and publishes it for the world to see.</p>
 
 
-        <div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
+<div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
           <Box>
-            <Link href="https://forms.hackclub.com/congressional-app-challenge" sx={{ textDecoration: 'none'}}>
+            <Link href="https://forms.hackclub.com/congressional-app-challenge" sx={{ textDecoration: 'none' }}>
               <Card
                 sx={{
                   position: 'relative',
@@ -271,6 +251,53 @@ export default function Home() {
           </Box>
 
         </div>
+        </div>
+
+        {/* blue Banner */}
+        <div className="relative z-50 w-full">
+          <Image
+            src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/380500f8aa4621bbeb57c272b1de4d899944248f_group_2.svg"
+            alt="Banner"
+            width={1920}
+            height={200}
+            className="w-full h-auto select-none pointer-events-none"
+            priority
+          />
+        </div>
+
+
+
+        <div className="relative z-50 max-w-3xl mx-auto p-6 pb-10">
+          <h1 className="text-4xl font-bold">Get Invited To The Congressional Hackathon</h1>
+          <p className="mt-4">The Congressional Finalist Award comes with an invite to the Congressional Hackathon-an in-person Hackathon in the Capitol, Washington D.C. Here are the numbers:</p>
+          <ul className="space-y-6 text-center">
+            <li>
+              <span className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                170
+              </span>
+              <p className="text-lg text-gray-700">students in Washington D.C.</p>
+            </li>
+            <li>
+              <span className="text-6xl font-bold bg-gradient-to-r from-green-500 to-teal-600 bg-clip-text text-transparent">
+                $10
+              </span>
+              <p className="text-lg text-gray-700">towards your travel stipend for every hour worked on your project</p>
+            </li>
+            <li>
+              <span className="text-6xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent">
+                10+
+              </span>
+              <p className="text-lg text-gray-700">congressional representatives coming to see finished projects</p>
+            </li>
+          </ul>
+          <p className="mt-4">Want to get started? RSVP using the link below, and start working on your project. Dont forget, every hour worked on a project counts $10 towards travel to Washington D.C. This only counts when logged with Hackatime.</p>
+
+        </div>
+
+
+
+
+        
 
 
         {/* blue Banner */}

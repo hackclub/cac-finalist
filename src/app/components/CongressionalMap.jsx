@@ -130,10 +130,10 @@ export default function CongressionalMap() {
 
   return (
     <MapContainer center={[37.8, -96]} zoom={4} style={{ height: "70vh", width: "100%" }}>
-      <TileLayer
+     {/* <TileLayer
         attribution="&copy; OpenStreetMap contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
+      /> */}
       {geoData && <GeoJSON data={geoData} style={style} onEachFeature={onEachFeature} />}
     </MapContainer>
   );
