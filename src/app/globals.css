@@ -195,6 +195,23 @@ footer {
 
 }
 
+
+
+body {
+  color: var(--foreground);
+  background-image:
+    url("https://hc-cdn.hel1.your-objectstorage.com/s/v3/688c9b9bec9d799be407270cb43714e5f4cfbb2f_bg-light.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 html {
   color-scheme: light;
 }

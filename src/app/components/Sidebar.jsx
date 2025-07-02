@@ -1,11 +1,12 @@
 const SideBar = () => {
   return (
     <div className="w-60">
-      <aside className="bg-slate-600 space-y-4 max-w-prose p-4 h-screen border-r-4 border-slate-800 border-dashed hackclub-font text-slate-300">
-        {/* Title */}
+<aside
+  className="bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900 space-y-4 max-w-prose p-4 h-screen border-r-4 border-slate-800 border-dashed hackclub-font text-slate-300"
+>        {/* Title */}
         <a
           href="/"
-          className="block text-3xl font-bold text-white mb-4 hover:text-blue-400 transition-colors"
+          className="block text-3xl font-bold text-white mb-4 hover:text-[--cac-blue] transition-colors"
         >
           Home
         </a>
@@ -15,12 +16,12 @@ const SideBar = () => {
           <h2 className="text-lg font-semibold mb-2 text-white">Getting the finalist award</h2>
           <ul className="space-y-1">
             <li>
-              <a href="/guide" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
+              <a href="/overview" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
                 Overview
               </a>
             </li>
             <li>
-              <a href="/resources" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
+              <a href="/github" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
                 Github
               </a>
             </li>
@@ -31,17 +32,17 @@ const SideBar = () => {
           <h2 className="text-lg font-semibold mb-2 text-white">The Congressional Hackathon</h2>
           <ul className="space-y-1">
             <li>
-              <a href="/pcb-overview" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
+              <a href="/faq" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
                 FAQ
               </a>
             </li>
             <li>
-              <a href="/pcb-resources" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
+              <a href="/travel-info" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
                 Travel Info
               </a>
             </li>
             <li>
-              <a href="/jlcpcb-ordering" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
+              <a href="/parents" className="block py-2 px-4 rounded hover:bg-slate-200 hover:text-cyan-800 transition-all">
                 For Parents
               </a>
             </li>

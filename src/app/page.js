@@ -5,6 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import theme from "@hackclub/theme"
+import Nav from './components/nav'
 
 import {
   BaseStyles,
@@ -77,6 +78,8 @@ export default function Home() {
 
   return (
     <ThemeUIProvider theme={theme}>
+      <Nav />
+
       <div className="relative w-full min-h-screen overflow-x-hidden font-mono bg-[#EBECE0]">
         {/* Star background */}
         <div
@@ -155,102 +158,102 @@ export default function Home() {
 
         {/*About */}
         <div className="relative z-50 max-w-3xl mx-auto p-6 pb-10">
-            <p className="text-4xl font-bold">Hack Club Congressional App Challenge</p>
-            <p className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent underline decoration-black">
-              Finalist Award
-            </p>
-          
+          <p className="text-4xl font-bold">Hack Club Congressional App Challenge</p>
+          <p className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent underline decoration-black">
+            Finalist Award
+          </p>
+
 
 
           <p className="mt-4">Every year, there are thousands of students who compete in the Congressional App Challenge. However, only a couple hundred get to go to the capital. For the 2025-2026 Congressional App Challenge, Hack Club would like to recognise the real winners-anybody who open sources their project and publishes it for the world to see.</p>
 
 
-<div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
-          <Box>
-            <Link href="https://forms.hackclub.com/congressional-app-challenge" sx={{ textDecoration: 'none' }}>
-              <Card
-                sx={{
-                  position: 'relative',
-                  overflow: 'visible',
-                  backgroundImage: 'linear-gradient(135deg, #00c9a7, #0086ed)',
-                  borderRadius: 'lg',
-                  p: 4,
-                  pt: 20, // space under sticker
-                  textAlign: 'center',
-                  boxShadow: 'card',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease-in-out',
-                  '&:hover': {
-                    boxShadow: 'lg',
-                    transform: 'scale(1.02)',
-                  },
-                }}
-              >
-                {/* Sticker-style image (no shadow, no shape constraints) */}
-                <Box
+          <div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
+            <Box>
+              <Link href="https://forms.hackclub.com/congressional-app-challenge" sx={{ textDecoration: 'none' }}>
+                <Card
                   sx={{
-                    position: 'absolute',
-                    top: '-40%',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '300px',
-                    height: 'auto',
+                    position: 'relative',
+                    overflow: 'visible',
+                    backgroundImage: 'linear-gradient(135deg, #00c9a7, #0086ed)',
+                    borderRadius: 'lg',
+                    p: 4,
+                    pt: 20, // space under sticker
+                    textAlign: 'center',
+                    boxShadow: 'card',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease-in-out',
+                    '&:hover': {
+                      boxShadow: 'lg',
+                      transform: 'scale(1.02)',
+                    },
                   }}
                 >
-                  <Image
-                    src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/8ce5cfe4471f476d3a010392f2c9d6b734b10608_image.png"
-                    alt="Sticker"
-                    width={300}
-                    height={0}
-                    style={{
-                      width: '100%',
+                  {/* Sticker-style image (no shadow, no shape constraints) */}
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      top: '-40%',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: '300px',
                       height: 'auto',
-                      objectFit: 'contain',
-                      display: 'block',
                     }}
-                    priority
-                  />
-                </Box>
+                  >
+                    <Image
+                      src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/8ce5cfe4471f476d3a010392f2c9d6b734b10608_image.png"
+                      alt="Sticker"
+                      width={300}
+                      height={0}
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                        objectFit: 'contain',
+                        display: 'block',
+                      }}
+                      priority
+                    />
+                  </Box>
 
 
-                <Heading variant="headline" sx={{ mt: 2 }}>
-                  Get Free Stickers
-                </Heading>
-                <p sx={{ color: 'muted', fontSize: 2 }}>
-                  Congressional App Challenge x Hack Club Stickers!!!
-                </p>
-              </Card>
-            </Link>
-          </Box>
+                  <Heading variant="headline" sx={{ mt: 2 }}>
+                    Get Free Stickers
+                  </Heading>
+                  <p sx={{ color: 'muted', fontSize: 2 }}>
+                    Congressional App Challenge x Hack Club Stickers!!!
+                  </p>
+                </Card>
+              </Link>
+            </Box>
 
 
 
-          <Box>
-            <Link href="https://hackclub.com/slack" sx={{ textDecoration: 'none' }}>
-              <Card
-                sx={{
-                  backgroundImage: 'linear-gradient(135deg, #ec3750, #ff8c37)',
-                  borderRadius: 'lg',
-                  p: 4,
-                  textAlign: 'center',
-                  boxShadow: 'card',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease-in-out',
-                  '&:hover': {
-                    boxShadow: 'lg',
-                    transform: 'scale(1.02)',
-                  },
-                }}
-              >
-                <Heading variant="headline">Join the Hack Club Slack</Heading>
-                <p sx={{ color: 'muted', fontSize: 2 }}>
-                  Channel #congressional-app-challenge
-                </p>
-              </Card>
-            </Link>
-          </Box>
+            <Box>
+              <Link href="https://hackclub.com/slack" sx={{ textDecoration: 'none' }}>
+                <Card
+                  sx={{
+                    backgroundImage: 'linear-gradient(135deg, #ec3750, #ff8c37)',
+                    borderRadius: 'lg',
+                    p: 4,
+                    textAlign: 'center',
+                    boxShadow: 'card',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease-in-out',
+                    '&:hover': {
+                      boxShadow: 'lg',
+                      transform: 'scale(1.02)',
+                    },
+                  }}
+                >
+                  <Heading variant="headline">Join the Hack Club Slack</Heading>
+                  <p sx={{ color: 'muted', fontSize: 2 }}>
+                    Channel #congressional-app-challenge
+                  </p>
+                </Card>
+              </Link>
+            </Box>
 
-        </div>
+          </div>
         </div>
 
         {/* blue Banner */}
@@ -297,7 +300,7 @@ export default function Home() {
 
 
 
-        
+
 
 
         {/* blue Banner */}
@@ -336,7 +339,7 @@ export default function Home() {
               <li>Submit your project to the Congressional App Challenge</li>
             </ul>
             <Link href="/overview" sx={{ textDecoration: 'none' }}>
-              <Button variant="primary">Learn more →</Button>
+              <Button variant="primary">Get Started →</Button>
             </Link>
           </Card>
         </div>
@@ -359,15 +362,8 @@ export default function Home() {
       <div>
         <Heading variant="headline" sx={{ m: 4 }} >Congressional District Submission Leaderboard</Heading>
         <p className="m-8">Want to help your district gain participation? Contact your local representatives and run events to boost participation!</p>
-
         <CongressionalMap />
-
-
       </div>
-
-
-
-
     </ThemeUIProvider >
   );
 }
