@@ -1,5 +1,7 @@
 "use client";
 
+import dynamic from 'next/dynamic';
+import 'leaflet/dist/leaflet.css';
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import theme from "@hackclub/theme"
@@ -27,6 +29,9 @@ import {
   ThemeUIProvider
 } from 'theme-ui'
 
+const CongressionalMap = dynamic(() => import('./components/CongressionalMap'), {
+  ssr: false,
+});
 
 export default function Home() {
   const maskRef = useRef(null);
@@ -97,10 +102,28 @@ export default function Home() {
               </p>
             </div>
             <br />
-<Link href="/vendors" sx={{ textDecoration: 'none' }}>
-  <Button variant="primary">Get Started</Button>
-</Link>
+            <Link href="/overview" sx={{ textDecoration: 'none' }}>
+              <Button
+                variant="primary"
+                sx={{
+                  bg: 'rgba(255, 255, 255, 0.1)', // translucent white
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)', // for Safari
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  borderRadius: 'xl',
+                  color: 'white',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  transition: 'all 0.2s ease-in-out',
+                  '&:hover': {
+                    bg: 'rgba(255, 255, 255, 0.15)',
+                    transform: 'scale(1.03)',
+                  },
+                }}
+              >
+                Get Started →
+              </Button>
 
+            </Link>
           </div>
 
           {/* Background image */}
@@ -146,13 +169,14 @@ export default function Home() {
           >
 
             <h1 className="text-4xl font-bold">Requirements:</h1>
-            <ul className="list-disc list-inside mt-4">
-              <li>Apply for the Congressional App Challenge</li>
-              <li>Spend at least 10 hours on your Congressional App Challenge project logged by Hackatime</li>
+            <ul className="list-disc list-inside mt-4 mb-4">
               <li>Open source your project on GitHub with a README.md</li>
               <li>Submit a playable link to your project in the Congressional App Challenge App submission</li>
               <li>Submit your project to the Congressional App Challenge</li>
             </ul>
+            <Link href="/overview" sx={{ textDecoration: 'none' }}>
+              <Button variant="primary">Learn more →</Button>
+            </Link>
           </Card>
         </div>
 
@@ -171,76 +195,89 @@ export default function Home() {
         </div>
 
         <div className="relative z-50 max-w-3xl mx-auto p-6 ">
-
-
-
-          <Heading variant="headline">Sign Up</Heading>
-          <Grid gap={3} columns={[null, 2]} as="form" variant="cards.sunken">
-            <Label>
-              Full name
-              <Input placeholder="Zach Latta" />
-            </Label>
-            <Label>
-              How are you primarily associated with Hack Club?
-              <Select>
-                <option value="" disabled hidden>
-                  Select one…
-                </option>
-                <option value="club-leader">I lead a club</option>
-                <option value="club-member">I am a club member</option>
-                <option value="slack-member">I am active on Slack</option>
-                <option value="alum">I am a Hack Club alum</option>
-                <option value="none">None of the above</option>
-              </Select>
-            </Label>
-            <Label variant="labelHoriz">
-              <Checkbox />
-              Remember me
-            </Label>
-            <Flex sx={{ flexWrap: 'wrap' }}>
-              <Label variant="labelHoriz">
-                <Radio name="letter" /> Alpha
-              </Label>
-              <Label variant="labelHoriz">
-                <Radio name="letter" /> Bravo
-              </Label>
-              <Label variant="labelHoriz">
-                <Radio name="letter" /> Charlie
-              </Label>
-            </Flex>
-            <Label>
-              Why do you want to come?
-              <Textarea placeholder="Write a few sentences." />
-            </Label>
-            <Label>
-              Slider
-              <Slider color="red" />
-            </Label>
-            <Button
-              as="button"
-              type="submit"
-              children="RSVP"
-              sx={{ gridColumn: [null, 'span 2'] }}
-            />
-          </Grid>
-
-          <Card
-            sx={{
-              bg: 'sunken', // Hack Club background shade
-              borderRadius: 'lg',
-              p: 4,
-              textAlign: 'center',
-              boxShadow: 'card',
-            }}
-          >
-            <h2 sx={{ color: 'white', fontSize: 4, mb: 2 }}>Finalist Award</h2>
-            <p sx={{ color: 'muted', fontSize: 2 }}>
-              Recognized for outstanding performance in design
-            </p>
-          </Card>
-
+          <h1 className="text-4xl font-bold">Get Invited To The Congressional Hackathon</h1>
+          <p className="mt-4">The Congressional Finalist Award comes with an invite to the Congressional Hackathon-an in-person Hackathon in the Capitol, Washington D.C. Here are the numbers:</p>
+          <ul className="space-y-6 text-center">
+            <li>
+              <span className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+                170
+              </span>
+              <p className="text-lg text-gray-700">students in Washington D.C.</p>
+            </li>
+            <li>
+              <span className="text-6xl font-bold bg-gradient-to-r from-green-500 to-teal-600 bg-clip-text text-transparent">
+                $10
+              </span>
+              <p className="text-lg text-gray-700">towards your travel stipend for every hour worked on your project</p>
+            </li>
+            <li>
+              <span className="text-6xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent">
+                10+
+              </span>
+              <p className="text-lg text-gray-700">congressional representatives coming to see finished projects</p>
+            </li>
+          </ul>
+          <p className="mt-4">Want to get started? RSVP using the link below, and start working on your project. Dont forget, every hour worked on a project counts $10 towards travel to Washington D.C. This only counts when logged with Hackatime.</p>
 
         </div>
+
+
+
+
+        <div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
+
+          <Heading variant="headline">RSVP to get updates</Heading>
+
+          <Box>
+            <Grid gap={3} columns={[null, 2]} as="form" variant="cards.sunken">
+              <Label>
+                Full name
+                <Input placeholder="Zach Latta" />
+              </Label>
+              <Label>
+                Email
+                <Input placeholder="joe@gmail.com" />
+              </Label>
+              <Label>
+                Congressional District
+                <Input placeholder="VT-1" />
+              </Label>
+              <Button
+                as="button"
+                type="submit"
+                children="RSVP"
+                sx={{ gridColumn: [null, 'span 2'] }}
+              />
+            </Grid>
+          </Box>
+
+          <Box>
+            <Link href="https://hackclub.com/slack" sx={{ textDecoration: 'none' }}>
+              <Card
+                sx={{
+                  backgroundImage: 'linear-gradient(135deg, #ec3750, #ff8c37)',
+                  borderRadius: 'lg',
+                  p: 4,
+                  textAlign: 'center',
+                  boxShadow: 'card',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease-in-out',
+                  '&:hover': {
+                    boxShadow: 'lg',
+                    transform: 'scale(1.02)',
+                  },
+                }}
+              >
+                <Heading variant="headline">Join the Hack Club Slack</Heading>
+                <p sx={{ color: 'muted', fontSize: 2 }}>
+                  Channel #congressional-app-challenge
+                </p>
+              </Card>
+            </Link>
+          </Box>
+
+        </div>
+
 
         {/* Banner */}
         <div className="relative z-50 w-full">
@@ -254,6 +291,11 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <div>
+      <h1>Congressional District Map</h1>
+      <CongressionalMap />
+    </div>
 
 
 
