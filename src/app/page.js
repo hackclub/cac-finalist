@@ -125,18 +125,18 @@ export default function Home() {
 
           {/* Background image */}
           <div
-        ref={bgRef}
-        className="absolute inset-0 z-0 select-none pointer-events-none will-change-transform"
-        style={{ height: "120%", top: "-10%" }}
-      >
-        <Image
-          src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/1993a55615ab2559dd935ba884ae07763df1ef93_u2974181345_create_an_image_where_it_is_a_header_which_contai_666a60fe-ff93-4b3e-8506-ca5fdbca675c_0.png"
-          alt="Banner"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
+            ref={bgRef}
+            className="absolute inset-0 z-0 select-none pointer-events-none will-change-transform"
+            style={{ height: "120%", top: "-10%" }}
+          >
+            <Image
+              src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/1993a55615ab2559dd935ba884ae07763df1ef93_u2974181345_create_an_image_where_it_is_a_header_which_contai_666a60fe-ff93-4b3e-8506-ca5fdbca675c_0.png"
+              alt="Banner"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
 
 
@@ -153,9 +153,9 @@ export default function Home() {
           />
         </div>
 
-      
 
-        <div className="relative z-50 max-w-3xl mx-auto p-6 ">
+
+        <div className="relative z-50 max-w-3xl mx-auto p-6 pb-10">
           <h1 className="text-4xl font-bold">Get Invited To The Congressional Hackathon</h1>
           <p className="mt-4">The Congressional Finalist Award comes with an invite to the Congressional Hackathon-an in-person Hackathon in the Capitol, Washington D.C. Here are the numbers:</p>
           <ul className="space-y-6 text-center">
@@ -186,31 +186,64 @@ export default function Home() {
 
 
         <div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
-
-          <Heading variant="headline">RSVP to get updates</Heading>
-
           <Box>
-            <Grid gap={3} columns={[null, 2]} as="form" variant="cards.sunken">
-              <Label>
-                Full name
-                <Input placeholder="Zach Latta" />
-              </Label>
-              <Label>
-                Email
-                <Input placeholder="joe@gmail.com" />
-              </Label>
-              <Label>
-                Congressional District
-                <Input placeholder="VT-1" />
-              </Label>
-              <Button
-                as="button"
-                type="submit"
-                children="RSVP"
-                sx={{ gridColumn: [null, 'span 2'] }}
-              />
-            </Grid>
+            <Link href="https://forms.hackclub.com/congressional-app-challenge" sx={{ textDecoration: 'none'}}>
+              <Card
+                sx={{
+                  position: 'relative',
+                  overflow: 'visible',
+                  backgroundImage: 'linear-gradient(135deg, #00c9a7, #0086ed)',
+                  borderRadius: 'lg',
+                  p: 4,
+                  pt: 20, // space under sticker
+                  textAlign: 'center',
+                  boxShadow: 'card',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease-in-out',
+                  '&:hover': {
+                    boxShadow: 'lg',
+                    transform: 'scale(1.02)',
+                  },
+                }}
+              >
+                {/* Sticker-style image (no shadow, no shape constraints) */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    top: '-40%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '300px',
+                    height: 'auto',
+                  }}
+                >
+                  <Image
+                    src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/8ce5cfe4471f476d3a010392f2c9d6b734b10608_image.png"
+                    alt="Sticker"
+                    width={300}
+                    height={0}
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      display: 'block',
+                    }}
+                    priority
+                  />
+                </Box>
+
+
+                <Heading variant="headline" sx={{ mt: 2 }}>
+                  Get Free Stickers
+                </Heading>
+                <p sx={{ color: 'muted', fontSize: 2 }}>
+                  Congressional App Challenge x Hack Club Stickers!!!
+                </p>
+              </Card>
+            </Link>
           </Box>
+
+
 
           <Box>
             <Link href="https://hackclub.com/slack" sx={{ textDecoration: 'none' }}>
@@ -252,7 +285,7 @@ export default function Home() {
           />
         </div>
 
-          <div className="relative z-20 p-10 text-black flex flex-col items-center">
+        <div className="relative z-20 p-10 text-black flex flex-col items-center">
           <Card
             sx={{
               bg: 'sunken',
@@ -297,8 +330,8 @@ export default function Home() {
       </div>
 
       <div>
-          <Heading variant="headline" sx={{ m: 4 }} >Congressional District Submission Leaderboard</Heading>
-          <p className="m-8">Want to help your district gain participation? Contact your local representatives and run events to boost participation!</p>
+        <Heading variant="headline" sx={{ m: 4 }} >Congressional District Submission Leaderboard</Heading>
+        <p className="m-8">Want to help your district gain participation? Contact your local representatives and run events to boost participation!</p>
 
         <CongressionalMap />
 
