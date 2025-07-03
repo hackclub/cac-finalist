@@ -12,6 +12,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@hackclub/icons": "^0.0.15",
+    "@hackclub/meta": "^1.1.33",
     "@hackclub/theme": "^0.3.3",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",

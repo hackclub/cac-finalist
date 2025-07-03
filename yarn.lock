@@ -246,6 +246,11 @@
   resolved "https://registry.yarnpkg.com/@hackclub/icons/-/icons-0.0.15.tgz#612b9e107d9eabb44e0eeb1f8ebfcdc6b88c2e28"
   integrity sha512-IKJ5JQhRhlkYINv9pxzT//fn3aYwsGBeyNNBcw7eU+J0lfs0wGrq9lh7CGcXUUGXaKFxDPRlWhTxaAVaRdZVRA==
 
+"@hackclub/meta@^1.1.33":
+  version "1.1.33"
+  resolved "https://registry.yarnpkg.com/@hackclub/meta/-/meta-1.1.33.tgz#e3ee378781330f9c13a82667e12ebe5393090f4d"
+  integrity sha512-03gvSNcjIy1c2kO0XW+uuxgPHALsPubqGivb2/9NBalGNH0FqnvRvWD5h+sPV6L6hpe+TbqYZG+Sq/e/vyT8wQ==
+
 "@hackclub/theme@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@hackclub/theme/-/theme-0.3.3.tgz#af4249519489459c0e6f9f50a9caab419495b92e"

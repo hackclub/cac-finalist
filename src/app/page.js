@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import theme from "@hackclub/theme"
 import Nav from './components/nav'
+import Meta from '@hackclub/meta'
 
 import {
   BaseStyles,
@@ -78,6 +79,11 @@ export default function Home() {
 
   return (
     <ThemeUIProvider theme={theme}>
+        <Meta
+        as={Head}
+        name="Hack Club Congressional App Challenge Finalist Award"
+        description={`Ship and open-source your CAC project, gain an award and invitation to the Congressional Hackathon!`}
+      />
       <Nav />
 
       <div className="relative w-full min-h-screen overflow-x-hidden font-mono bg-[#EBECE0]">
