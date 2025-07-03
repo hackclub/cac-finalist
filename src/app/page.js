@@ -163,14 +163,14 @@ export default function Home() {
 
         {/*About */}
         <div className="relative z-50 max-w-3xl mx-auto p-6 pb-10">
-          <p className="text-4xl font-bold">Hack Club Congressional App Challenge</p>
+          <p className="text-4xl font-bold text-black">Hack Club Congressional App Challenge</p>
           <p className="text-4xl font-bold bg-gradient-to-r from-pink-500 to-red-600 bg-clip-text text-transparent underline decoration-black">
             Finalist Award
           </p>
 
 
 
-          <p className="mt-4">Every year, there are thousands of students who compete in the Congressional App Challenge. However, only a couple hundred get to go to the capital. For the 2025-2026 Congressional App Challenge, Hack Club would like to recognise the real winners-anybody who open sources their project and publishes it for the world to see.</p>
+          <p className="mt-4 text-black">Every year, there are thousands of students who compete in the Congressional App Challenge. However, only a couple hundred get to go to the capital. For the 2025-2026 Congressional App Challenge, Hack Club would like to recognise the real winners-anybody who open sources their project and publishes it for the world to see.</p>
 
 
           <div className="relative z-50 max-w-3xl mx-auto p-6 space-y-4">
@@ -276,8 +276,8 @@ export default function Home() {
 
 
         <div className="relative z-50 max-w-3xl mx-auto p-6 pb-10">
-          <h1 className="text-4xl font-bold">Get Invited To The Congressional Hackathon</h1>
-          <p className="mt-4">The Congressional Finalist Award comes with an invite to the Congressional Hackathon-an in-person Hackathon in the Capitol, Washington D.C. Here are the numbers:</p>
+          <h1 className="text-4xl font-bold text-black">Get Invited To The Congressional Hackathon</h1>
+          <p className="mt-4 text-black">The Congressional Finalist Award comes with an invite to the Congressional Hackathon-an in-person Hackathon in the Capitol, Washington D.C. Here are the numbers:</p>
           <ul className="space-y-6 text-center">
             <li>
               <span className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -298,7 +298,7 @@ export default function Home() {
               <p className="text-lg text-gray-700">congressional representatives coming to see finished projects</p>
             </li>
           </ul>
-          <p className="mt-4">Want to get started? RSVP using the link below, and start working on your project. Dont forget, every hour worked on a project counts $10 towards travel to Washington D.C. This only counts when logged with Hackatime.</p>
+          <p className="mt-4 text-black">Want to get started? RSVP using the link below, and start working on your project. Dont forget, every hour worked on a project counts $10 towards travel to Washington D.C. This only counts when logged with Hackatime.</p>
 
         </div>
 
@@ -323,7 +323,7 @@ export default function Home() {
         <div className="relative z-20 p-10 text-black flex flex-col items-center">
           <Card
             sx={{
-              bg: 'sunken',
+              bg: '#E0E6ED',
               borderRadius: 'lg',
               p: 4,
               textAlign: 'center',
@@ -337,8 +337,8 @@ export default function Home() {
             }}
           >
 
-            <h1 className="text-4xl font-bold">Requirements:</h1>
-            <ul className="list-disc list-inside mt-4 mb-4">
+            <h1 className="text-4xl font-bold text-black">Requirements:</h1>
+            <ul className="list-disc list-inside mt-4 mb-4 text-black">
               <li>Open source your project on GitHub with a README.md</li>
               <li>Submit a playable link to your project in the Congressional App Challenge App submission</li>
               <li>Submit your project to the Congressional App Challenge</li>
