@@ -80,7 +80,6 @@ export default function Home() {
   return (
     <ThemeUIProvider theme={theme}>
         <Meta
-        as={Head}
         name="Hack Club Congressional App Challenge Finalist Award"
         description={`Ship and open-source your CAC project, gain an award and invitation to the Congressional Hackathon!`}
       />
