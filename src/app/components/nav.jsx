@@ -69,20 +69,16 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#" className="block px-2 py-1 rounded hover:bg-blue-600">
+            <a href="/overview" className="block px-2 py-1 rounded hover:bg-blue-600">
               Docs
             </a>
           </li>
           <li>
-            <a href="#" className="block px-2 py-1 rounded hover:bg-blue-600">
-              Githb 
+            <a href="/faq" className="block px-2 py-1 rounded hover:bg-blue-600">
+              FAQ 
             </a>
           </li>
-          <li>
-            <a href="#" className="block px-2 py-1 rounded hover:bg-blue-600">
-              Contact
-            </a>
-          </li>
+         
         </ul>
       )}
     </nav>
